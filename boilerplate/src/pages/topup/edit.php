@@ -1,6 +1,7 @@
 <?php
-require_once __DIR__ . '/../../../config/Database.php';
+require_once __DIR__ . '/../../../config/database.php';
 require_once __DIR__ . '/../../../app/Topup.php';
+
 
 $database = new Database();
 $db = $database->dbConnection();

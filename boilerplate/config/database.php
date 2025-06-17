@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable('/app');
-$dotenv->load();
+// $dotenv = Dotenv\Dotenv::createImmutable('/app');
+// $dotenv->load();
 
 class Database {
     private $host;
@@ -13,11 +13,11 @@ class Database {
     public $conn;
 
     public function __construct() {
-        $this->host = $_ENV['DB_HOST'];
-        $this->port = $_ENV['DB_PORT'];
-        $this->database = $_ENV['DB_NAME'];
-        $this->username = $_ENV['DB_USER'];
-        $this->password = $_ENV['DB_PASS'];
+        $this->host     = getenv('DB_HOST');
+        $this->port     = getenv('DB_PORT');
+        $this->database = getenv('DB_NAME');
+        $this->username = getenv('DB_USER');
+        $this->password = getenv('DB_PASS');
     }
 
     public function dbConnection(){
