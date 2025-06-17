@@ -1,6 +1,11 @@
 <?php
-require_once __DIR__ . '/../../../../config/database.php';
-require_once __DIR__ . '/../../../../app/Games.php';
+echo __DIR__;
+echo '<br>';
+echo realpath(__DIR__ . '/../../../config/Database.php');
+echo '<br>';
+echo file_exists(__DIR__ . '/../../../config/Database.php') ? 'FOUND ✅' : 'NOT FOUND ❌';
+require_once __DIR__ . '/../../../config/Database.php';
+require_once __DIR__ . '/../../../app/Games.php';
 
 
 $database = new Database();
