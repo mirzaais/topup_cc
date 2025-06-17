@@ -1,13 +1,7 @@
 <?php
-echo 'Current path: ' . __DIR__ . '<br>';
-echo 'Looking for: ' . realpath(__DIR__ . '/../../vendor/autoload.php') . '<br>';
-echo file_exists(__DIR__ . '/../../vendor/autoload.php') ? '✅ Found' : '❌ Not found';
-echo file_exists(__DIR__ . '/../vendor/autoload.php') ? '✅ Found' : '❌ Not found';
-
-
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..'); 
+$dotenv = Dotenv\Dotenv::createImmutable('/app');
 $dotenv->load();
 
 class Database {
