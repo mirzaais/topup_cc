@@ -1,6 +1,7 @@
 <?php
-require_once '../../../config/Database.php';
-require_once '../../../app/Users.php';
+
+require_once __DIR__ . '/../../../config/Database.php';
+require_once __DIR__ . '/../../../app/Users.php';
 
 $database = new Database();
 $db = $database->dbConnection();
